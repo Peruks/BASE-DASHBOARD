@@ -1,0 +1,63 @@
+.volume-chart-container {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-glass);
+    padding: var(--spacing-lg);
+
+    .volume-chart-container {
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-glass);
+        padding: var(--spacing-lg);
+        backdrop-filter: blur(12px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .volume-chart-container h3 {
+        margin: 0;
+        color: var(--text-primary);
+        font-size: 1.1rem;
+    }
+
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .asset-selector {
+        display: flex;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .asset-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-secondary);
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .asset-btn:hover {
+        color: var(--text-primary);
+    }
+
+    .asset-btn.active {
+        background: var(--primary);
+        color: white;
+        font-weight: 500;
+    }
+
+    .chart-wrapper {
+        flex: 1;
+        min-height: 300px;
+    }
