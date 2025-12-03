@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import type { TokenTransfer } from '../types';
 import { format } from 'date-fns';
-import '../styles/TokenActivityChart.css';
+
 
 interface TokenActivityChartProps {
     transfers: TokenTransfer[];

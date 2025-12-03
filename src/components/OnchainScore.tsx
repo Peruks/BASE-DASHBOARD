@@ -3,7 +3,7 @@ import { calculateWalletStats } from '../utils/analytics';
 import { ActivityHeatmap } from './ActivityHeatmap';
 import { GasAnalytics } from './GasAnalytics';
 import type { Transaction } from '../types';
-import '../styles/OnchainScore.css';
+
 
 interface OnchainScoreProps {
     transactions: Transaction[];

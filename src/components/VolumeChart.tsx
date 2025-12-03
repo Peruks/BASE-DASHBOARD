@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import type { Transaction, TokenTransfer } from '../types';
 import { format } from 'date-fns';
-import '../styles/VolumeChart.css';
+
 
 interface VolumeChartProps {
     transactions: Transaction[];

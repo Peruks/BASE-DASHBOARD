@@ -1,6 +1,6 @@
 import React from 'react';
 import type { TokenHolding } from '../types';
-import '../styles/TokenHoldings.css';
+
 
 interface TokenHoldingsProps {
     holdings: TokenHolding[];

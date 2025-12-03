@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
-import '../styles/SearchInput.css';
+
 
 interface SearchInputProps {
     onSearch: (address: string) => void;

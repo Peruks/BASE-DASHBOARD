@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Trophy, TrendingUp, Award, Star } from 'lucide-react';
 import type { WalletData } from '../types';
-import '../styles/WalletRank.css';
+
 
 interface WalletRankProps {
     data: WalletData;

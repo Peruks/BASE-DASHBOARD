@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fuel, Clock, Calendar } from 'lucide-react';
 import type { WalletStats } from '../utils/analytics';
-import '../styles/GasAnalytics.css';
+
 
 interface GasAnalyticsProps {
     stats: WalletStats['gasStats'];

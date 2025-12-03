@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { ArrowDownLeft, ArrowUpRight, ExternalLink } from 'lucide-react';
 import type { Transaction } from '../types';
 import { formatAddress, formatDate } from '../utils';
-import '../styles/TransactionsTable.css';
+
 
 interface TransactionsTableProps {
     transactions: Transaction[];
