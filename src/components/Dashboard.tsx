@@ -12,7 +12,7 @@ import { WalletRank } from './WalletRank';
 import { OnchainScore } from './OnchainScore';
 import { BehavioralInsights } from './BehavioralInsights';
 import { WelcomeHero } from './WelcomeHero';
-import '../styles/Dashboard.css';
+
 
 interface DashboardProps {
     data: WalletData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import type { DailyActivity } from '../utils/analytics';
-import '../styles/ActivityHeatmap.css';
+
 
 interface ActivityHeatmapProps {
     data: DailyActivity[];

@@ -2,7 +2,7 @@ import { Layout } from './components/Layout';
 import { SearchInput } from './components/SearchInput';
 import { Dashboard } from './components/Dashboard';
 import { useWalletData } from './hooks/useWalletData';
-import './App.css';
+
 
 function App() {
   const { data, loading, error, fetchWalletData } = useWalletData();
