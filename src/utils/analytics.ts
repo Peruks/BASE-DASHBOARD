@@ -1,4 +1,4 @@
-import { differenceInDays, format, startOfYear, eachDayOfInterval, endOfToday, isSameDay, subDays } from 'date-fns';
+import { differenceInDays, format, eachDayOfInterval, subDays } from 'date-fns';
 import type { Transaction } from '../types';
 
 export interface DailyActivity {
@@ -57,7 +57,6 @@ export const calculateWalletStats = (transactions: Transaction[]): WalletStats =
     // 1. Process Dates
     const sortedTxs = [...transactions].sort((a, b) => Number(a.timeStamp) - Number(b.timeStamp));
     const firstTxDate = new Date(Number(sortedTxs[0].timeStamp) * 1000);
-    const lastTxDate = new Date(Number(sortedTxs[sortedTxs.length - 1].timeStamp) * 1000);
     const today = new Date();
 
     // 2. Activity Map (Date -> Count)

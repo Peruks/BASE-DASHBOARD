@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import '../styles/WelcomeHero.css';
 
 const QUOTES = [
@@ -48,7 +48,7 @@ export const WelcomeHero: React.FC = () => {
                         <motion.span
                             className="wave-emoji"
                             animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
-                            transition={{ duration: 2.5, loop: Infinity, repeatDelay: 5 }}
+                            transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 5 }}
                             style={{ display: 'inline-block', marginLeft: '10px' }}
                         >
                             👋

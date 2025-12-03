@@ -1,5 +1,4 @@
 import React from 'react';
-import { Tooltip } from 'recharts'; // Re-using Recharts tooltip styling if possible, or simple title
 import type { DailyActivity } from '../utils/analytics';
 import '../styles/ActivityHeatmap.css';
 
