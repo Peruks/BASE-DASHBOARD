@@ -31,6 +31,15 @@ function App() {
         </div>
       )}
 
+      {/* DEBUG SECTION - REMOVE LATER */}
+      <div style={{ padding: '10px', background: '#333', color: '#0f0', fontSize: '12px', marginBottom: '20px', borderRadius: '4px' }}>
+        <strong>DEBUG INFO:</strong><br />
+        Loading: {loading ? 'YES' : 'NO'}<br />
+        Error: {error || 'NONE'}<br />
+        Data: {data ? 'LOADED' : 'NULL'}<br />
+        Tx Count: {data?.transactions?.length || 0}
+      </div>
+
       {data && !loading && (
         <Dashboard data={data} />
       )}
