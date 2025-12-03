@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# BaseScan Pro Dashboard (Learning Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple on-chain analytics dashboard that consumes the [BaseScan](https://basescan.org/) API and visualizes activity for a given wallet address.
 
-Currently, two official plugins are available:
+> ⚠️ Note: This is a **learning / practice project**, not a production analytics tool and not affiliated with Base or BaseScan.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project was built to understand:
 
-## Expanding the ESLint configuration
+- How to **call REST APIs** and work with JSON responses  
+- How to structure information inside a **dashboard layout**  
+- How to display metrics and charts for better **data storytelling**  
+- How to **deploy** a small project using Vercel
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+It is not a full data science project – it’s mainly about APIs, UI and basic visualization.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+For a given Base wallet address, the dashboard currently shows:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **On-chain score** (based on recent transactions)  
+- **Total gas spent**  
+- **Active time & active day**  
+- **Total transactions & unique active days**  
+- **Success rate and interaction stats**  
+- Top contract interactions (last N transactions)  
+- Simple activity charts (recent volume / token activity)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Many of these values come directly from the BaseScan API response and are displayed in a clean UI.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠 Tech Stack
+
+> Update this section if your stack is different.
+
+- Frontend: React / Next.js  
+- Styling: Tailwind CSS  
+- Deployment: Vercel  
+- Data Source: BaseScan API
+
