@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Wallet, Activity } from 'lucide-react';
 import type { WalletData } from '../types';
 import { formatBalance } from '../utils';
@@ -19,32 +18,12 @@ interface DashboardProps {
     data: WalletData;
 }
 
-const containerVariants = {
-    hidden: { opacity: 1 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1
-        }
-    }
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-};
-
 export const Dashboard: React.FC<DashboardProps> = ({ data }) => {
     return (
-        <motion.div
-            className="dashboard-container"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-        >
+        <div className="dashboard-container">
             <WelcomeHero />
 
-            <motion.div className="overview-grid" variants={itemVariants}>
+            <div className="overview-grid">
                 <Card title="ETH Balance" className="balance-card">
                     <div className="card-content">
                         <Wallet className="card-icon" size={24} />
@@ -66,17 +45,17 @@ export const Dashboard: React.FC<DashboardProps> = ({ data }) => {
                 </Card>
 
                 <WalletRank data={data} />
-            </motion.div>
+            </div>
 
-            <motion.div className="insights-section" variants={itemVariants}>
+            <div className="insights-section">
                 <OnchainScore transactions={data.transactions} address={data.address} />
-            </motion.div>
+            </div>
 
-            <motion.div className="behavioral-section" style={{ marginBottom: '24px' }} variants={itemVariants}>
+            <div className="behavioral-section" style={{ marginBottom: '24px' }}>
                 <BehavioralInsights stats={calculateWalletStats(data.transactions).interactionStats} />
-            </motion.div>
+            </div>
 
-            <motion.div className="charts-grid" variants={itemVariants}>
+            <div className="charts-grid">
                 <div className="chart-col">
                     <VolumeChart
                         transactions={data.transactions}
@@ -87,16 +66,16 @@ export const Dashboard: React.FC<DashboardProps> = ({ data }) => {
                 <div className="chart-col">
                     <TokenActivityChart transfers={data.tokenTransfers} />
                 </div>
-            </motion.div>
+            </div>
 
-            <motion.div className="content-grid" variants={itemVariants}>
+            <div className="content-grid">
                 <div className="holdings-col">
                     <TokenHoldings holdings={data.holdings} />
                 </div>
                 <div className="transactions-col">
                     <TransactionsTable transactions={data.transactions} currentAddress={data.address} />
                 </div>
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     );
 };
