@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wallet, Activity, Clock } from 'lucide-react';
+import { Wallet, Activity } from 'lucide-react';
 import type { WalletData } from '../types';
-import { formatBalance, formatDate, formatRelativeTime } from '../utils';
+import { formatBalance } from '../utils';
 import { calculateWalletStats } from '../utils/analytics';
 import { Card } from './Card';
 import { TransactionsTable } from './TransactionsTable';

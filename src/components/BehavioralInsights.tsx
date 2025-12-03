@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Target, Users, Zap } from 'lucide-react';
+import { Clock, Target, Users } from 'lucide-react';
 import type { InteractionStats } from '../utils/analytics';
 import '../styles/BehavioralInsights.css';
 
