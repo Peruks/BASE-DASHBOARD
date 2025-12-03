@@ -1,0 +1,88 @@
+.heatmap-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+}
+
+.heatmap-grid {
+    display: flex;
+    gap: 3px;
+}
+
+.heatmap-week {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.heatmap-cell {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.level-0 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.level-1 {
+    background-color: #0e4429;
+}
+
+.level-2 {
+    background-color: #006d32;
+}
+
+.level-3 {
+    background-color: #26a641;
+}
+
+.level-4 {
+    background-color: #39d353;
+}
+
+/* Blue Theme Variant (to match Base) */
+.heatmap-cell.level-1 {
+    background-color: #1e3a8a;
+}
+
+/* Dark Blue */
+.heatmap-cell.level-2 {
+    background-color: #2563eb;
+}
+
+/* Blue */
+.heatmap-cell.level-3 {
+    background-color: #3b82f6;
+}
+
+/* Light Blue */
+.heatmap-cell.level-4 {
+    background-color: #60a5fa;
+}
+
+/* Lighter Blue */
+
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+    justify-content: flex-end;
+}
+
+.legend-cells {
+    display: flex;
+    gap: 3px;
+}
